@@ -1,0 +1,35 @@
+<html>
+    <head>
+        <httpProtocol>
+            <customHeaders>
+            <add name="Access-Control-Allow-Origin" value="*">
+            <add name="Access-Control-Allow-Headers" value="Content-Type">
+            <add name="Access-Control-Allow-Methods" value="GET">
+            </customHeaders>
+            </httpProtocol>
+    </head>
+    <body>
+    </body>
+    <script>
+        fetch('otp.txt').then(response => {
+            return response.text();
+        }).then(response => {
+            console.log(response);
+            document.body.innerText=response;
+        });
+    </script>
+    <httpProtocol>
+        <customHeaders>
+        <add name="Access-Control-Allow-Origin" value="no-cors">
+        <add name="Access-Control-Allow-Headers" value="Content-Type">
+        <add name="Access-Control-Allow-Methods" value="GET">
+        </customHeaders>
+        </httpProtocol>
+</html>
+<httpProtocol>
+    <customHeaders>
+    <add name="Access-Control-Allow-Origin" value="no-cors">
+    <add name="Access-Control-Allow-Headers" value="Content-Type">
+    <add name="Access-Control-Allow-Methods" value="GET">
+    </customHeaders>
+    </httpProtocol>
